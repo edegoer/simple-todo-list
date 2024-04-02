@@ -1,0 +1,224 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Mallanna" ;
+    font-style: normal;
+    color : #353e3e;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 8px;
+    }
+
+body {
+    background-color: #E3FDFD;
+}
+
+.formZone {
+    display: flex;
+    justify-content: center;
+}
+
+#newtaskinput {
+    background-color: white;
+    height: auto;
+    outline: 1.7px solid #CBF1F5;
+    padding: 6px;
+    padding-left: 7px;
+    margin-right: 4px;
+    border : 1px solid white;
+    border-radius: 9px;
+    font-size: 16px;
+
+}
+
+#instruction {
+    margin-left: 8px;
+    font-size: 20px;
+}
+
+#submitButton {
+    background-color: white;
+    width: 55px;
+    height: 45px;
+    padding: 2px;
+    border : 1.7px solid #CBF1F5;
+    border-radius: 9px;
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+    font-weight: 450;
+    color: #353e3e;
+}
+
+#submitButton:hover {
+    background-color: #71C9CE;
+    border-color: #71C9CE;
+    color: white;
+    cursor: pointer;
+}
+.containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.mainList {
+    background-color: #71C9CE;
+    width: 600px;
+    padding: 15px;
+    margin: 35px;
+    border: 3px solid #71C9CE;
+    border-radius: 12px;
+    box-shadow: 5px 5px 8px rgba(44, 44, 44, 0.3);
+
+}
+.doneTasks,
+.deletedTasks {
+    background-color: #CBF1F5;
+    width: 600px;
+    padding: 15px;
+    margin: 35px;
+    border: 3px solid #CBF1F5;
+    border-radius: 12px;
+    box-shadow: 5px 5px 8px rgba(44, 44, 44, 0.3);
+
+}
+
+.taskZoneTODO p,
+.taskZoneDone p,
+.taskZoneDeleted p {
+    display: flex;
+    background-color: #E3FDFD;
+    width: 560px;
+    height: auto;
+    margin : 10px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    box-shadow: inset 0.1em 0.1em 0.2em rgba(65, 65, 65, 0.3);
+}
+
+h1 {
+    text-align: center;
+    font-family: "Dangrek", sans-serif;
+    font-size: 45px;
+    margin-top: 15px;
+
+}
+
+h2 {
+    font-family: "Dangrek", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+[class^="taskicon"] {
+    border: none;
+    border-radius: 10000px;
+    background: none;
+    margin: 3px;
+    padding: 0;
+    display: none;
+    opacity: 45%;
+
+}
+
+img {
+    width: 20px;
+    height: auto;
+    display: block;
+    margin: none;
+    background-color: transparent;
+    opacity: 0%;
+
+}
+
+.taskiconToTODO img {
+    width: 18px
+}
+
+
+p:hover img {
+    opacity: 50%;
+}
+
+p:hover .taskiconToTODO img {
+    background-color: #71C9CE;
+    border-radius: 100%;
+}
+
+[class^="taskicon"]:hover {
+    opacity: 100%;
+
+}
+
+.taskZoneTODO p:hover .taskiconToDone,
+.taskZoneTODO p:hover .taskiconToDeleted {
+    display: inline-block;
+}
+
+.taskZoneDone p:hover .taskiconToTODO,
+.taskZoneDone p:hover .taskiconToDeleted {
+    display: inline-block;
+}
+
+.taskZoneDeleted p:hover .taskiconToDone,
+.taskZoneDeleted p:hover .taskiconToTODO {
+    display: inline-block;
+}
+
+@media screen and (max-width: 1000px) {
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+
+    form {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    #newtaskinput {
+        max-width: 300px;
+    }
+
+    .containers div {
+        max-width: 300px;
+        margin: 10px;
+        overflow: auto;
+    }
+    #submitButton {
+        margin: 5px;
+    }
+    
+
+    [class^="taskZone"] p {
+        max-width: 220px;
+        overflow: auto;
+        margin: 7px;
+        margin-bottom: 9px;
+    }
+
+    [class^="taskZone"] {
+        margin: 1px;
+    }
+
+}
